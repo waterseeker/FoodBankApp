@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Entry</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="../styles/dataEntry.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+</head>
+<body>
+    <h1 class="text-center">Household Information</h1>
+    <h3 class="text-center">Please tell us about your household. We will use this data to help better serve your household and everyone who receives
+        services from us.
+    </h3>
+    <form class="form-horizontal" id="customerHousehold">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="household">Number of Household Members</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="household" placeholder="How many people live in your household?">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="householdFemale">Of those, how many are female?</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="householdFemales" placeholder="How many females are in your household?">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="householdMales">How many are male?</label>
+    <div class="col-sm-10"> 
+      <input type="number" class="form-control" id="householdMales" placeholder="How many males are in your household?">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="age0-5"> How many people in your household are ages 0-5?</label>
+    <div class="col-sm-10"> 
+      <input type="number" class="form-control" id="age0-5" placeholder="How many people in the household are 0-5?">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="age6-18"> How many people in your household are ages 6-18?</label>
+    <div class="col-sm-10">
+        <!--this age range will be broken down even further, but we should only have that option if there are members in this 
+        age range. If not, all the internal age ranges in 6-18 should populate with 0's.-->
+      <input type="number" class="form-control" id="age6-18" placeholder="How many people in the household are 6-18?">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="age19-59"> How many people in your household are ages 19-59?</label>
+    <div class="col-sm-10"> 
+      <input type="number" class="form-control" id="age19-59" placeholder="How many people in the household are 19-59?">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="age60+"> How many people in your household are 60 or older?</label>
+    <div class="col-sm-10"> 
+      <input type="number" class="form-control" id="age60+" placeholder="How many people in the household are 60 or older?">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="vetStatus">How many people in your household are vetersns of the United States?</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" id="vetStatus" placeholder="Any veterans in the household?">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="zip"> What zipcode do you live in?</label>
+    <div class="col-sm-10"> 
+      <input type="number" class="form-control" id="zip" placeholder="Zipcode">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="serviceDate">Month and year you are receiving services.</label>
+    <div class="col-sm-10"> 
+        <!--this should auto-populate if possible-->
+      <input type="number" class="form-control" id="serviceDate" placeholder="MM/YYYY">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="federalAid">Is anyone in your household currently receiving federal aid?</label>
+    <div class="col-sm-10"> 
+    <!--if yes, we may want the option to select form specific aid programs to track usage of thsoe programs in 
+    conjunction with the foodbank services-->
+      <input type="text" class="form-control" id="federalAid" placeholder="Receiving federal aid?">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="usdaForm">Have you completed the USDA aid forms for this year?</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" id="usdaForm" placeholder="Completed USDA form for this year?">
+      <!--if no, we should take the user to a place where they can complete the form... preferrable through the same app-->
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button id="submitBtn" type="submit" class="btn btn-default">Submit</button>
+      <!--we want a reminder/user agreement that they are commiting purjury if they lie in the form-->
+    </div>
+  </div>
+</form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> <!--jQuery--> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> <!--bootstrap JS-->
+    <script src="../js/dataEntry.js"></script>
+</body>
+</html>
