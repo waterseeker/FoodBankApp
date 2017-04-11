@@ -1,0 +1,21 @@
+/* color palette
+green #76be43
+orange #f9a11b
+white #ffffff
+
+fonts---
+looks like their website uses Arial, Helvetica, sans-serif for everything. we can probably spruce that up some
+titles font-family: 'Roboto', sans-serif;
+body font-family: 'Raleway', sans-serif;
+*/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    color: #76be43;
+}
+
+a:hover { 
+    color: #f9a11b;
+}
+
